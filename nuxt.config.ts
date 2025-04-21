@@ -8,4 +8,10 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   modules: ["@nuxt/ui", "@nuxt/icon", "@nuxt/fonts", "@nuxt/content"],
+  router: {
+    options: {
+      hashMode: true,
+      scrollBehaviorType: "smooth",
+    },
+  },
 });

@@ -25,6 +25,7 @@ const handleError = () => clearError({ redirect: "/" });
       class="container mx-auto my-2 gap-4 flex flex-col items-center justify-center h-screen"
     >
       <h2>{{ error.statusCode }} error!</h2>
+      <p>{{ error.statusMessage }}</p>
       <button class="btn btn-primary" @click="handleError">
         Terug naar de homepagina
       </button>

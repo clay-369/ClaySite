@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto my-2">
+  <div class="container mx-auto my-2 gap-4 flex flex-col">
     <Header />
-    <slot />
+    <NuxtPage />
   </div>
 </template>

@@ -4,6 +4,6 @@
       <Header />
       <NuxtPage />
     </div>
-    <Footer class="fixed bottom-0 w-full" />
+    <Footer class="mt-auto" />
   </div>
 </template>

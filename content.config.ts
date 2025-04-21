@@ -5,7 +5,7 @@ export default defineContentConfig({
     content: defineCollection({ type: "page", source: "**/*.md" }),
     sections: defineCollection({
       type: "data",
-      source: "**/*.yml",
+      source: "sections/*.yml",
       schema: z.object({
         name: z.string(),
       }),
@@ -20,6 +20,16 @@ export default defineContentConfig({
             url: z.string(),
           })
         ),
+      }),
+    }),
+    projects: defineCollection({
+      type: "data",
+      source: "projects/**.yml",
+      schema: z.object({
+        name: z.string(),
+        description: z.string(),
+        image: z.string(),
+        url: z.string(),
       }),
     }),
   },

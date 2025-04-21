@@ -10,5 +10,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <About />
+  <div class="flex flex-col gap-8">
+    <About />
+    <Projects />
+  </div>
 </template>

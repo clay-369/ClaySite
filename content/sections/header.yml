@@ -1,0 +1,11 @@
+nav:
+  - title: Over mij
+    url: /over-mij
+  - title: Contact
+    url: /contact
+  - title: Projecten
+    dropdown:
+      - title: Project 1
+        url: /project-1
+      - title: Project 2
+        url: /project-2

@@ -9,7 +9,4 @@ useSeoMeta({
 });
 </script>
 
-<template>
-  <ContentRenderer v-if="home" :value="home" />
-  <div v-else>Geen content gevonden</div>
-</template>
+<template></template>

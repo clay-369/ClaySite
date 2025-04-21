@@ -51,8 +51,19 @@
       </ul>
     </div>
     <div class="navbar-end gap-2">
-      <Icon name="mdi:github" />
-      <Icon name="mdi:linkedin" />
+      <a
+        v-for="button in buttons.icons"
+        :key="button.icon"
+        :href="button.url"
+        target="_blank"
+      >
+        <Icon :name="button.icon" />
+      </a>
     </div>
   </div>
 </template>
+<script setup>
+const { data: buttons } = await useAsyncData("buttons", () => {
+  return queryCollection("ui").first();
+});
+</script>

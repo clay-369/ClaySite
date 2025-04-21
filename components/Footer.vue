@@ -21,7 +21,7 @@
         <h6 class="footer-title">Sociale media</h6>
         <div class="grid grid-flow-col gap-4">
           <a
-            v-for="icon in footer.icons"
+            v-for="icon in buttons.icons"
             :key="icon.icon"
             :href="icon.url"
             target="_blank"
@@ -36,5 +36,9 @@
 <script setup>
 const { data: footer } = await useAsyncData("footer", () => {
   return queryCollection("sections").first();
+});
+
+const { data: buttons } = await useAsyncData("buttons", () => {
+  return queryCollection("ui").first();
 });
 </script>

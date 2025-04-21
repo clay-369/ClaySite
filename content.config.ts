@@ -8,6 +8,12 @@ export default defineContentConfig({
       source: "**/*.yml",
       schema: z.object({
         name: z.string(),
+      }),
+    }),
+    ui: defineCollection({
+      type: "data",
+      source: "ui/*.yml",
+      schema: z.object({
         icons: z.array(
           z.object({
             icon: z.string(),

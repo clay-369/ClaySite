@@ -9,4 +9,6 @@ useSeoMeta({
 });
 </script>
 
-<template></template>
+<template>
+  <About />
+</template>

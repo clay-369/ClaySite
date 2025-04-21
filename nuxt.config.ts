@@ -14,4 +14,5 @@ export default defineNuxtConfig({
       scrollBehaviorType: "smooth",
     },
   },
+  components: [{ path: "~/components", pathPrefix: false }],
 });

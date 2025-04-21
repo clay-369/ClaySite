@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 shadow-sm border rounded-lg sticky top-2">
+  <div class="navbar bg-base-100 shadow-sm border rounded-lg sticky top-2 z-10">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -27,8 +27,9 @@
           <li>
             <a>Projecten</a>
             <ul class="p-2">
-              <li><a>Project 1</a></li>
-              <li><a>Project 2</a></li>
+              <li v-for="project in projects" :key="project.name">
+                <a>{{ project.name }}</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -43,8 +44,9 @@
           <details>
             <summary>Projecten</summary>
             <ul class="p-2">
-              <li><a>Project 1</a></li>
-              <li><a>Project 2</a></li>
+              <li v-for="project in projects" :key="project.name">
+                <a>{{ project.name }}</a>
+              </li>
             </ul>
           </details>
         </li>
@@ -65,5 +67,9 @@
 <script setup>
 const { data: buttons } = await useAsyncData("buttons", () => {
   return queryCollection("ui").first();
+});
+
+const { data: projects } = await useAsyncData("projects", () => {
+  return queryCollection("projects").all();
 });
 </script>

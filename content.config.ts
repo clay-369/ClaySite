@@ -30,6 +30,7 @@ export default defineContentConfig({
         description: z.string(),
         image: z.string(),
         url: z.string(),
+        tags: z.array(z.string()),
       }),
     }),
   },

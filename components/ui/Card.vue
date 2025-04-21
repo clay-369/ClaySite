@@ -1,10 +1,14 @@
 <template>
   <div
-    class="card bg-base-100 w-96 shadow-sm border cursor-pointer hover:shadow-md transition-all duration-300"
-    v-if="project.image"
+    class="card bg-base-100 shadow-sm border cursor-pointer hover:shadow-md transition-all duration-300"
   >
     <figure>
-      <img :src="project.image" alt="Shoes" />
+      <img
+        :src="project.image"
+        class="w-full h-50 object-cover"
+        v-if="project.image"
+      />
+      <img src="/img/no_image.png" class="w-full h-50 object-cover" v-else />
     </figure>
     <div class="card-body">
       <h2 class="card-title">
@@ -14,13 +18,8 @@
       <p>
         {{ project.description }}
       </p>
-      <div class="card-actions justify-start">
-        <div
-          class="badge badge-outline"
-          v-if="project.tags"
-          v-for="tag in project.tags"
-          :key="tag"
-        >
+      <div class="card-actions">
+        <div class="badge badge-outline" v-for="tag in project.tags">
           {{ tag }}
         </div>
       </div>

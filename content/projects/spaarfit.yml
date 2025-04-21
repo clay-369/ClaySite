@@ -1,0 +1,8 @@
+name: Spaarfit
+description: "Spaarfit is een innovatieve app die gebruikers helpt om energie te besparen en hun energieverbruik inzichtelijk te maken. De app biedt persoonlijke tips en adviezen om duurzamer te leven."
+image: "/img/spaarfit.jpg"
+url: "https://example.com/projects"
+tags:
+  - "Sveltekit"
+  - "Nativescript"
+  - "Mocha.js"

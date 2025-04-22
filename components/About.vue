@@ -6,7 +6,7 @@
       v-for="section in about.sections"
       :key="section.title"
     >
-      <h2>{{ section.title }}</h2>
+      <h3>{{ section.title }}</h3>
       <p>{{ section.description }}</p>
       <ul
         class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
@@ -16,6 +16,14 @@
         </li>
       </ul>
     </div>
+    <div class="flex flex-row gap-2 lg:w-[80%]">
+      <ContentRenderer
+        :value="markdown"
+        v-if="markdown"
+        class="contentrenderer flex flex-row flex-wrap gap-4"
+      />
+      <div v-else>No skills found</div>
+    </div>
   </div>
 </template>
 
@@ -23,4 +31,15 @@
 const { data: about } = await useAsyncData("about", () => {
   return queryCollection("about").first();
 });
+
+const { data: markdown } = await useAsyncData(() =>
+  queryCollection("content").path("/about").first()
+);
 </script>
+
+<style>
+.contentrenderer p {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

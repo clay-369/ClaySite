@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-screen">
-    <div class="container mx-auto my-2 gap-4 flex flex-col">
+    <div class="container">
       <Header />
       <NuxtPage />
     </div>

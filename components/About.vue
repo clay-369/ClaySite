@@ -1,40 +1,25 @@
 <template>
   <div id="#about" class="flex flex-col gap-4">
-    <div class="flex flex-col gap-2">
-      <h1>Introductie</h1>
-      <p>
-        <!-- Voeg hier een korte introductie van jezelf toe -->
-      </p>
-    </div>
-    <div>
-      <h2>Achtergrond</h2>
-      <p>
-        <!-- Voeg hier informatie over je opleiding en werkervaring toe -->
-      </p>
-    </div>
-    <div>
-      <h2>Passies en Interesses</h2>
-      <p>
-        <!-- Beschrijf hier je passies en interesses -->
-      </p>
-    </div>
-    <div>
-      <h2>Persoonlijke Details</h2>
-      <p>
-        <!-- Deel hier enkele persoonlijke details -->
-      </p>
-    </div>
-    <div>
-      <h2>Missie of Doelstellingen</h2>
-      <p>
-        <!-- Beschrijf hier je missie of doelstellingen -->
-      </p>
-    </div>
-    <div>
-      <h2>Contactinformatie</h2>
-      <p>
-        <!-- Voeg hier je contactinformatie toe -->
-      </p>
+    <div
+      class="flex flex-col gap-2 lg:w-[80%]"
+      v-for="section in about.sections"
+      :key="section.title"
+    >
+      <h1>{{ section.title }}</h1>
+      <p>{{ section.description }}</p>
+      <ul
+        class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+      >
+        <li v-for="item in section.list" :key="item">
+          {{ item }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
+
+<script setup>
+const { data: about } = await useAsyncData("about", () => {
+  return queryCollection("about").first();
+});
+</script>

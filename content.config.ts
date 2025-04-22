@@ -10,6 +10,13 @@ export default defineContentConfig({
         name: z.string(),
       }),
     }),
+    about: defineCollection({
+      type: "data",
+      source: "about/*.yml",
+      schema: z.object({
+        sections: z.array(z.object({})),
+      }),
+    }),
     ui: defineCollection({
       type: "data",
       source: "ui/*.yml",

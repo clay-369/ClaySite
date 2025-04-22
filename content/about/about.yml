@@ -1,0 +1,30 @@
+sections:
+  - title: Over mij
+    description: Clayton Sumter is een 21-jarige student met een passie voor het ontwikkelen van websites en apps. Clayton Houdt van sporten, lezen en programmeren. Hij is begonnen met het ontwikkelen van software door interesse in computers. Clayton is leergierig en heeft veel doorzettinsgvermogen, niet alleen achter zijn toetsenbord en IDE, maar ook op het basketbalveld! Clayton is vanaf jongs af aan al een sportfanaat. Hij houdt van teamsporten zoals basketball en voetbal. Werken in en als een team is voor Clayton heel belangrijk. Comunnicatie staat op nummer 1 voor Clayton!
+  - title: Werkervaring
+    description: Over mijn werkervaring
+    list:
+      - Full Stack Developer
+      - Test Automation Engineer
+      - AI tool development
+  - title: Passies en Interesses
+    description: Over mijn passies en interesses
+    list:
+      - Basketball
+      - Lezen
+      - Programmeren
+      - Sporten
+      - Familie
+      - Vrienden
+  - title: Persoonlijke Details
+    description: Over mijn persoonlijke details
+    list:
+      - 21 jaar
+      - Geboren en opgegroeid in Rotterdam
+  - title: Missie of Doelstellingen
+    description: Over mijn missie of doelstellingen
+    list:
+      - Beter worden in backend development (Database, API's, etc.)
+      - Meer doen met security van (web)applicaties
+      - Meer ervaring op doen op het gebied van DevOps
+      - Beter worden in het testen van software & test automatisering

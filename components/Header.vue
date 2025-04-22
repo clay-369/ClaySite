@@ -1,5 +1,7 @@
 <template>
-  <div class="navbar bg-base-100 shadow-sm border rounded-lg sticky top-2 z-10">
+  <div
+    class="navbar container bg-base-100 shadow-sm border rounded-lg sticky top-2 z-10"
+  >
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -38,9 +40,10 @@
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Over mij</a></li>
-        <li><a>Contact</a></li>
-        <li>
+        <li><NuxtLink to="/#about">Over mij</NuxtLink></li>
+        <li><NuxtLink to="/#contact">Contact</NuxtLink></li>
+        <li><NuxtLink to="/#projects">Projecten</NuxtLink></li>
+        <!-- <li>
           <details>
             <summary>Projecten</summary>
             <ul class="p-2">
@@ -49,7 +52,7 @@
               </li>
             </ul>
           </details>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="navbar-end gap-2">
@@ -64,7 +67,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 const { data: buttons } = await useAsyncData("buttons", () => {
   return queryCollection("ui").first();
 });

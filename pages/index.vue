@@ -1,3 +1,10 @@
+<template>
+  <div class="flex flex-col gap-8">
+    <About />
+    <Projects />
+  </div>
+</template>
+
 <script setup lang="ts">
 const { data: home } = await useAsyncData(() =>
   queryCollection("content").path("/").first()
@@ -8,10 +15,3 @@ useSeoMeta({
   description: home.value?.description,
 });
 </script>
-
-<template>
-  <div class="flex flex-col gap-8">
-    <About />
-    <Projects />
-  </div>
-</template>

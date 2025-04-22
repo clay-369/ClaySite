@@ -1,5 +1,5 @@
 <template>
-  <div id="#about" class="flex flex-col gap-8 lg:gap-4">
+  <div id="about" class="flex flex-col gap-8 lg:gap-4">
     <h1>Over mij</h1>
     <div
       class="flex flex-col gap-2 lg:w-[80%]"

@@ -1,11 +1,12 @@
 <template>
   <div id="#about" class="flex flex-col gap-4">
+    <h1>Over mij</h1>
     <div
       class="flex flex-col gap-2 lg:w-[80%]"
       v-for="section in about.sections"
       :key="section.title"
     >
-      <h1>{{ section.title }}</h1>
+      <h2>{{ section.title }}</h2>
       <p>{{ section.description }}</p>
       <ul
         class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"

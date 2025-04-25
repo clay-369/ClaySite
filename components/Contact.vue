@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="flex flex-col gap-8 lg:gap-4 justify-center">
+  <div id="contact" class="flex flex-col gap-8 lg:gap-4 justify-center py-18">
     <h2 class="text-center">Contact</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <a

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="navbar container bg-base-100 shadow-sm border rounded-lg sticky top-2 z-10"
-  >
+  <div class="navbar bg-base-100 shadow-sm border-b sticky top-0 z-10">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -36,7 +34,7 @@
           </li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">ClaySite</a>
+      <NuxtLink class="btn btn-ghost text-xl" to="/#about">ClaySite</NuxtLink>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">

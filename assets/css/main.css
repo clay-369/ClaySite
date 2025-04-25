@@ -28,5 +28,5 @@ h6 {
 }
 
 .container {
-  @apply max-w-screen-xl mx-auto px-6 my-4 text-left;
+  @apply max-w-screen-xl mx-auto px-6  text-left;
 }

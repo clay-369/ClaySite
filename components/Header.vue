@@ -22,16 +22,9 @@
           tabindex="0"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
         >
-          <li><a>Over mij</a></li>
-          <li><a>Contact</a></li>
-          <li>
-            <a>Projecten</a>
-            <ul class="p-2">
-              <li v-for="project in projects" :key="project.name">
-                <a>{{ project.name }}</a>
-              </li>
-            </ul>
-          </li>
+          <li><NuxtLink to="/#about">Over mij</NuxtLink></li>
+          <li><NuxtLink to="/#projects">Projecten</NuxtLink></li>
+          <li><NuxtLink to="/#contact">Contact</NuxtLink></li>
         </ul>
       </div>
       <NuxtLink class="btn btn-ghost text-xl" to="/#about">ClaySite</NuxtLink>
@@ -39,8 +32,9 @@
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li><NuxtLink to="/#about">Over mij</NuxtLink></li>
-        <li><NuxtLink to="/#contact">Contact</NuxtLink></li>
         <li><NuxtLink to="/#projects">Projecten</NuxtLink></li>
+        <li><NuxtLink to="/#contact">Contact</NuxtLink></li>
+
         <!-- <li>
           <details>
             <summary>Projecten</summary>
@@ -70,6 +64,7 @@ const { data: buttons } = await useAsyncData("buttons", () => {
   return queryCollection("ui").first();
 });
 
+// TODO: Must be used in the future to navigate projects for more information
 const { data: projects } = await useAsyncData("projects", () => {
   return queryCollection("projects").all();
 });

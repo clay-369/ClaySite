@@ -40,5 +40,12 @@ export default defineContentConfig({
         tags: z.array(z.string()),
       }),
     }),
+    contact: defineCollection({
+      type: "data",
+      source: "contact/*.yml",
+      schema: z.object({
+        sections: z.array(z.object({})),
+      }),
+    }),
   },
 });

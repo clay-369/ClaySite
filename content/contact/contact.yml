@@ -1,0 +1,13 @@
+sections:
+  - title: Email
+    icon: mdi:email
+    link: mailto:claytonsum10@gmail.com
+    text: claytonsum10@gmail.com
+  - title: Phone
+    icon: mdi:phone
+    link: tel:+31622456609
+    text: +31 6 22456609
+  - title: Linkedin
+    icon: mdi:linkedin
+    link: https://linkedin.com/in/clayton-sumter-101834241
+    text: Personal Linkedin

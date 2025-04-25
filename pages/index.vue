@@ -2,6 +2,7 @@
   <div class="flex flex-col gap-8">
     <About />
     <Projects />
+    <Contact />
   </div>
 </template>
 

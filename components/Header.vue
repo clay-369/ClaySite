@@ -49,7 +49,7 @@
     </div>
     <div class="navbar-end gap-2">
       <a
-        v-for="button in buttons.icons"
+        v-for="button in buttons?.icons"
         :key="button.icon"
         :href="button.url"
         target="_blank"

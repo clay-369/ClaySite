@@ -15,4 +15,13 @@ export default defineNuxtConfig({
     },
   },
   components: [{ path: "~/components", pathPrefix: false }],
+  app: {
+    head: {
+      title: "ClaySite",
+      htmlAttrs: {
+        lang: "nl",
+      },
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
 });
